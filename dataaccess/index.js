@@ -1,9 +1,6 @@
 const makeSecretDb = require("./secretDb");
 
-module.exports.myDb = () => {
-  //all sequlize db connection;
-  console.log("database connection");
-};
+const db = require("../../../../models");
 
-const secretDb = makeSecretDb({ myDb });
-module.exports = { secretDb };
+const myDb = makeSecretDb(db);
+module.exports = myDb;
